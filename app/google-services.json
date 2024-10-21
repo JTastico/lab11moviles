@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295592142199",
+    "project_id": "lab11--jturpo",
+    "storage_bucket": "lab11--jturpo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295592142199:android:d3725141a2d4426a49ed72",
+        "android_client_info": {
+          "package_name": "com.example.makeitso"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuyIDNaQEGwkyg95_fU_XxkFRux0nN7Ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

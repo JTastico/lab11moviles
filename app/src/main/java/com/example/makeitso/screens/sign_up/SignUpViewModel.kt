@@ -16,6 +16,7 @@ limitations under the License.
 
 package com.example.makeitso.screens.sign_up
 
+import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import com.example.makeitso.R.string as AppText
 import com.example.makeitso.SETTINGS_SCREEN
@@ -70,10 +71,16 @@ class SignUpViewModel @Inject constructor(
       SnackbarManager.showMessage(AppText.password_match_error)
       return
     }
-
+//Añadir llamado a la funcion linkAccount del servicio de cuenta
     launchCatching {
-      accountService.linkAccount(email, password)
-      openAndPopUp(SETTINGS_SCREEN, SIGN_UP_SCREEN)
+      try {
+        accountService.linkAccount(email, password)
+        openAndPopUp(SETTINGS_SCREEN, SIGN_UP_SCREEN)
+      } catch (e: Exception) {
+        Log.e("SignUp", "Error linking account", e)
+        // Mostrar mensaje de error específico
+      }
     }
+
   }
 }
